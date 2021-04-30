@@ -1,0 +1,37 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?859f5010f20b63e61718b801e814c92b") format("truetype"),
+url("./flaticon.woff?859f5010f20b63e61718b801e814c92b") format("woff"),
+url("./flaticon.woff2?859f5010f20b63e61718b801e814c92b") format("woff2"),
+url("./flaticon.eot?859f5010f20b63e61718b801e814c92b#iefix") format("embedded-opentype"),
+url("./flaticon.svg?859f5010f20b63e61718b801e814c92b#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "efficiency": "\f101",
+    "blockchain": "\f102",
+    "sign": "\f103",
+);
+
+.flaticon-efficiency:before {
+    content: map-get($flaticon-map, "efficiency");
+}
+.flaticon-blockchain:before {
+    content: map-get($flaticon-map, "blockchain");
+}
+.flaticon-sign:before {
+    content: map-get($flaticon-map, "sign");
+}
